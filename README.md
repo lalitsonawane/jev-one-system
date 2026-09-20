@@ -23,6 +23,24 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Your key stays on the server (`src/app/api/triage/route.ts`). Never expose it to the browser.
 
+## Deploy (Vercel)
+
+Production is on the **Apptonic's projects** team:
+
+| | |
+| --- | --- |
+| Project | [jev-one-system](https://vercel.com/apptonics-projects/jev-one-system) |
+| Production URL | https://jev-one-system.vercel.app |
+| Git | `main` → production (auto-deploy on push) |
+
+Required env (Production + Preview):
+
+```bash
+TYPESAFE_API_KEY=sk-...
+```
+
+Set it in the [Vercel project → Settings → Environment Variables](https://vercel.com/apptonics-projects/jev-one-system/settings/environment-variables), then redeploy. Without it the UI loads but `POST /api/triage` returns 503.
+
 ## Project map
 
 | Path | Role |
